@@ -1,13 +1,16 @@
 
 <!--
-  To display “Hello from BridgeLabz” using One Way Data Bindings.
+  UC4 : To display Hello from BridgeLabz with a user inputted name.
+        - Make sure it is two way binding so that the change in the value can be reflected in the Hello Message.
   @author : Krunal Lad
   @since : 21-08-2021
 -->
 
 <div class="container">
-  <h1>{{this.title}}</h1>
+  <h1>Hello {{this.userName}} from BridgeLabz</h1>
   <img [src]="imgUrl" (click)="OnClick($event)" alt="The BridgeLabz logo : a Bridge to Employement through a Lab works.">
 </div>
-
+<div class="container">
+  <input [(ngModel)] = "userName"/>
+</div>
 <router-outlet></router-outlet>
